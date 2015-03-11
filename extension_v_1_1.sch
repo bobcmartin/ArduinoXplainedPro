@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -933,8 +933,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 <connect gate="DIGITAL2" pin="9" pad="25"/>
 <connect gate="DIGITAL2" pin="AREF" pad="40"/>
 <connect gate="DIGITAL2" pin="GND" pad="30"/>
-<connect gate="DIGITAL2" pin="SCL" pad="50"/>
-<connect gate="DIGITAL2" pin="SDA" pad="60"/>
+<connect gate="DIGITAL2" pin="SCL" pad="60"/>
+<connect gate="DIGITAL2" pin="SDA" pad="50"/>
 <connect gate="ISP" pin="1" pad="ICSP1"/>
 <connect gate="ISP" pin="2" pad="ICSP2"/>
 <connect gate="ISP" pin="3" pad="ISCP3"/>
@@ -1102,8 +1102,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="EXT1" library="SparkFun" deviceset="M10X2" device=""/>
 <part name="U$2" library="ihpcb-arduino" deviceset="ARDUINO_UNO_SIZE_MCU_BOARD_NO_PWR" device=""/>
 <part name="PWR" library="ihpcb-pin_header" deviceset="M02X2" device=""/>
-<part name="R1" library="ihpcb-res_cap" deviceset="R0603" device="" value="N.M."/>
-<part name="R2" library="ihpcb-res_cap" deviceset="R0603" device="" value="N.M."/>
+<part name="R1" library="ihpcb-res_cap" deviceset="R0603" device="" value="NOT MOUNTED"/>
+<part name="R2" library="ihpcb-res_cap" deviceset="R0603" device="" value="NOT MOUNTED"/>
 </parts>
 <sheets>
 <sheet>
@@ -1436,12 +1436,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="U$2" gate="POWER" pin="3.3V"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="15.24" x2="55.88" y2="25.4" width="0.1524" layer="91"/>
-<junction x="55.88" y="25.4"/>
-<label x="55.88" y="25.4" size="1.778" layer="95" rot="R90"/>
-<pinref part="U$2" gate="POWER" pin="IOREF"/>
-</segment>
-<segment>
 <pinref part="PWR" gate="G$1" pin="4"/>
 <wire x1="-15.24" y1="60.96" x2="-7.62" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-7.62" y="60.96"/>
@@ -1457,6 +1451,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="19.05" y1="91.44" x2="19.05" y2="96.52" width="0.1524" layer="91"/>
 <junction x="19.05" y="96.52"/>
 <label x="19.05" y="96.52" size="1.778" layer="95"/>
+<junction x="19.05" y="91.44"/>
 </segment>
 </net>
 <net name="ID" class="0">
@@ -1514,6 +1509,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="106,1,-30.48,63.5,VEXT_P5V0,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
